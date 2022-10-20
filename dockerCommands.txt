@@ -1,0 +1,2 @@
+docker build -t fortuneteller:v1 .
+docker run -p 8000:8000 fortuneteller:v1
