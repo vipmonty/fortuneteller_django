@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'randomfortune/base.html' %}
+
+<!--the below code loads the static/ style.css file-->
+{% load static %}
 
 <head>
-    <title>Django Fortune Teller</title>
-    <style>
-        body {
-            text-align: center;
-        }
-    </style>
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'randomfortune/style.css' %}">
+    {% endblock %}
 </head>
 
 <body>
-    <h1>Here is your Fortune</h1>
-
+    {% block content %}
+    <h1>Your Fortune</h1>
     <p>{{ fortunes }}</p>
+    {% endblock %}
 </body>
-
-</html>
